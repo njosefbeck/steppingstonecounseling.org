@@ -1,0 +1,285 @@
+/* MAIN STYLES */
+
+@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+@import url(http://fonts.googleapis.com/css?family=Imprima);
+
+html, body {
+  background: #BFD4D9;
+  font-family: 'Imprima';
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  color: #D93240;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Imprima';
+}
+
+a:hover {
+  color: #0F5959;
+}
+
+.wrapper {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width : 530px) {
+  .brand {
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+  }
+}
+
+.brand__logo a {
+  font-size: 1em;
+  color: #0F5959;
+}
+
+h1 {
+  font-family: 'Bree Serif';
+  color: #0F5959;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Bree Serif';
+  color: #D93240;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+p, ul, form {
+    color: #0F5959;
+    font-family: 'Imprima';
+    font-size: 18px;
+}
+
+/* NAV STYLES */
+
+.nav {
+  order: 5;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+@media only screen and (min-width : 800px) {
+  .nav {
+    order: 0;
+    align-self: center;
+    flex-grow: 5;
+    width: 0;
+  }
+}
+
+.nav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media only screen and (min-width : 800px) {
+  .nav__list {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+.nav__list__item {
+  padding: 5px 0;
+}
+
+@media only screen and (min-width : 800px) {
+  .nav__list__item {
+    margin: 0 0 0 20px;
+    align-self: center;
+  }
+}
+
+.menu {
+  padding: 0 10px 10px;
+  margin: 0;
+  flex-grow: 3;
+}
+
+@media only screen and (min-width : 450px) {
+  .menu {  
+    flex-grow: 1;
+    align-self: center;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width : 799px) {
+  .menu {
+    display: none;
+    order: 10;
+  }
+}
+
+.menu__text {
+  padding: 10px 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (min-width : 550px) {
+  .menu__text {  
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.menu__link {
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media only screen and (min-width : 799px) {
+  .menu__link {  
+    display: none;
+  }
+}
+
+/* WELCOME PAGE STYLES */
+
+.welcome__img {
+  width: 100%;
+  height: 300px;
+  background-image: url('../images/welcome.jpg');
+  background-size: cover;
+}
+
+/* ABOUT PAGE STYLES */
+
+.About__header {
+  margin: 0;
+  padding: 0;
+}
+
+.About__img {
+  position: relative;
+  float: left;
+}
+
+.About__img--profile {
+  margin: 0 20px 8px 0;
+  width: 25%;
+}
+
+@media only screen and (max-width : 500px) {
+  .About__img--profile {
+    float: none; 
+    display: block;
+    margin: 0 auto 8px;
+    width: 50%;
+  }
+}
+
+.About__img--org {
+  width: 100px;
+  margin: 0 10px;
+}
+
+/* CONTACT PAGE STYLES */
+
+.Contact {
+  width: 100%;
+}
+
+#map {
+  height: 200px;
+  width: 100%;
+}
+
+@media only screen and (min-width : 700px) {
+  .Contact__address {
+    float: right;
+  }
+}
+
+input { 
+  padding: 9px; 
+  border: solid 1px #d5d5d5; 
+  outline: 0; 
+  width: 200px; 
+  background: #FFFFFF;  
+} 
+
+input, textarea { 
+  padding: 9px; 
+  border: solid 1px #E5E5E5; 
+  outline: 0; 
+  width: 200px; 
+  background: #FFFFFF; 
+} 
+   
+textarea { 
+  width: 400px; 
+  max-width: 400px; 
+  height: 150px; 
+  line-height: 150%; 
+} 
+   
+input:hover, textarea:hover, 
+input:focus, textarea:focus { 
+  border-color: #C9C9C9; 
+} 
+   
+.form label { 
+  margin-left: 10px; 
+} 
+   
+.submit input { 
+  width: auto; 
+  padding: 9px 15px; 
+  background: #0f5959; 
+  border: 0; 
+  font-size: 14px; 
+  color: #FFFFFF; 
+}
+
+/* NEW CLIENTS PAGE STYLES */
+
+.clientform__header {
+  background: #fff;
+  padding: 15px;
+  margin: 0 0 10px 0;
+  color: #0F5959;
+  cursor: pointer;
+}
+
+.clientform__list {
+  background: #fff;
+  padding: 15px;
+  list-style-type: none;
+  transition: all 0.5s ease;
+}
+
+.clientform__list__item {
+  margin: 0 0 10px 0;
+  cursor: pointer;
+}
+
+.isHidden {
+  display: none;
+  transition: all 0.5s ease;
+}

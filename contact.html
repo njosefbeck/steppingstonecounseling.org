@@ -1,0 +1,97 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stepping Stone Counseling : Contact</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <script src="bower_components/modernizr/modernizr.js"></script>
+
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <div class="wrapper">
+        <header class="brand">
+          <h1 class="brand__logo"><a href="index.html">Stepping Stone Counseling</a></h1>
+        </header>
+        <div class="menu">
+          <div class="menu__text">
+            <a class="menu__link" href="#nav">MENU</a>
+          </div>
+        </div>
+        <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__list__item">
+            <a href="about.html">About</a>
+          </li>
+          <li class="nav__list__item">
+            <a href="newclients.html">New Clients</a>
+          </li>
+          <li class="nav__list__item">
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <a name="nav"></a>
+      
+      <main class="Contact">
+          <h3>Office Location</h3>
+          <div id="map"></div>
+          <p class="Contact__address">
+            <strong>Inside the St. Louis Wellness Center</strong><br/>
+            425 Marshall Avenue<br/>
+            Webster Groves, Missouri 63119
+          </p>
+          <article>
+            <h3>Get in touch</h3>
+            <ul>
+              <li><a href="https://www.facebook.com/SteppingStoneCounselingLLC">Facebook</a></li>
+              <li>Phone: <a href="tel:3143746471">314-374-6471</a></li>
+            </ul>
+            <p>Use the form below to send me an e-mail.</p>
+            <form class="form" action="https://getsimpleform.com/messages?form_api_token=10059c176c0c4f2538105cacad3da175" method="post">
+                <input type='hidden' name='redirect_to' value='http://www.njosefbeck.com/stepping-stone/thank-you.html' />
+                <p class="name">
+                    <input type="text" name="name" id="name" />
+                    <label for="name">Name</label>
+                </p>
+               
+                <p class="email">
+                    <input type="text" name="email" id="email" />
+                    <label for="email">E-mail</label>
+                </p>
+
+                <p class="name">
+                    <input type="text" name="phonenumber" id="phonenumber" />
+                    <label for="phonenumber">Phone #</label>
+                </p>
+               
+                <p class="text">
+                    <textarea name="text"></textarea>
+                </p>
+               
+                <p class="submit">
+                    <input type="submit" value="Send" />
+                </p>
+               
+            </form>
+          </article>
+        </main>
+
+    </div>
+    
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="scripts/main.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWmzsNI6g0gYCzJzyGNH7PqhKJv9Qhhik&callback=initMap"></script>
+
+  </body>
+</html>
