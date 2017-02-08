@@ -1,12 +1,4 @@
-// This accordion is for the New Clients page
-
-$(function() {
-	$( "#accordion" ).accordion({
-		collapsible: true,
-		active: false,
-		heightStyle: "content"
-	});
-});
+smoothScroll.init();
 
 // Map API for Contacts page
 

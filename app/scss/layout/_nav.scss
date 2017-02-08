@@ -1,0 +1,38 @@
+nav {
+	position: relative;
+	margin-bottom: 0.75rem;
+
+	a {
+		text-decoration: none;
+		color: $half-baked;
+	}
+
+	ul {
+		position: absolute;
+		margin: 0 auto;
+		width: 200px;
+		left: 0;
+		right: 0;
+		top: 138%;
+		background-color: $white;
+
+		li {
+			padding: 5px;
+
+			&:first-child, &:last-child {
+				border: 3px solid $half-baked;
+			}
+
+			&:not(:first-child), &:not(:last-child) {
+				border-left: 3px solid $half-baked;
+				border-right: 3px solid $half-baked;
+			}
+		}
+	}
+
+	.hamburger {
+		cursor: pointer;
+		color: $half-baked;
+		font-size: 1.5rem;
+	}
+}

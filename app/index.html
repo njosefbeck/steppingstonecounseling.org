@@ -14,17 +14,18 @@
     <div class="wrapper">
     	<header>
     		<h1>Stepping Stone Counseling</h1>
-    		<div><i class="fa fa-bars" aria-hidden="true"></i></div>
     		<nav>
+    			<span class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></span>
     			<ul>
-    				<li><a href="#">About</a></li>
-    				<li><a href="#">New Clients</a></li>
-    				<li><a href="#">Contact</a></li>
+    				<li><a data-scroll href="#about">About</a></li>
+    				<li><a data-scroll href="#new-clients">New Clients</a></li>
+    				<li><a data-scroll href="#contact">Contact</a></li>
     			</ul>
     		</nav>
     	</header>
     	<main>
-    		<section>
+    		<img src="images/banner.jpg" alt="Site Banner" />
+    		<section id="about">
     			<h2>Sarah Strohmayer</h2>
     			<h4>MA, LPC, NCC</h4>
 
@@ -66,7 +67,7 @@
 					<li><a href="https://therapists.psychologytoday.com/rms/prof_detail.php?profid=105584&amp;p=10&amp;tr=Ext_Verify">Verified by Psychology Today</a></li>
 				</ul>
     		</section>
-    		<section>
+    		<section id="new-clients">
     			<h2>New Clients</h2>
 
     			<p>The insurance companies with which I am contracted at this time are Anthem Blue Cross Blue Shield, Cigna, and HealthLink.Please print out and complete the Insurance Information Form if you plan to pay using one of those benefits.</p>
@@ -86,7 +87,7 @@
               		<li><a href="forms/Privacy Notice.pdf" target="_blank">Privacy Notice</a></li>
 				</ul>
     		</section>
-    		<section>
+    		<section id="contact">
     			<h2>Office Location</h2>
     			<div id="map"></div>
 				<p>
@@ -114,15 +115,14 @@
 	                <input type="hidden" name="_subject" value="Form submission through steppingstonecounseling.com" />
 	                <input type="text" name="_gotcha" style="display:none" />
 
-	                <input type="text" name="name" />
 	                <label for="name">Name</label>
+	                <input type="text" name="name" placeholder="Name" />
 	           
-	           
-	                <input type="text" name="email" />
-	                <label for="email">E-mail</label>
+	           		<label for="email">Email</label>
+	                <input type="text" name="email" placeholder="Email" />
 	            
-	                <input type="text" name="phonenumber" />
-	                <label for="phonenumber">Phone #</label>
+	            	<label for="phonenumber">Phone</label>
+	                <input type="text" name="phonenumber" placeholder="Phone" />
 	           
 	                <textarea name="message">Message</textarea>
 	           
@@ -131,5 +131,7 @@
     		</section>
     	</main>
     </div>
+    <script type="text/javascript" src="js/smooth-scroll.js"></script>
+    <script type="text/javascript" src="bundle.js"></script>
   </body>
 </html>
