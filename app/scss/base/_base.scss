@@ -2,7 +2,7 @@ body {
 	font-family: $main-font;
 	font-size: 100%;
 	color: $elephant;
-	line-height: 1.3;
+	line-height: 1.4;
 	background-color: $white;
 	text-align: center;
 }
@@ -39,6 +39,6 @@ h4 {
 	margin-bottom: 0.75rem;
 }
 
-p {
+p, ul {
 	margin-bottom: 0.75rem;
 }
