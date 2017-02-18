@@ -94,3 +94,18 @@ header {
 		clear: both;
 	}
 }
+
+footer {
+	font-size: 0.75rem;
+	padding-top: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-bottom: 2rem;
+
+	a,
+	a:visited,
+	a:hover,
+	a:link {
+		color: $elephant;
+	}
+}

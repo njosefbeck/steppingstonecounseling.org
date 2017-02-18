@@ -121,6 +121,18 @@ p, ul {
     padding: 0 10px;
     clear: both; } }
 
+footer {
+  font-size: 0.75rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem; }
+  footer a,
+  footer a:visited,
+  footer a:hover,
+  footer a:link {
+    color: #164459; }
+
 nav {
   position: relative;
   margin-bottom: 0.75rem; }
