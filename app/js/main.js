@@ -1,23 +1,15 @@
-smoothScroll.init();
+'use strict';
 
-// Map API for Contacts page
+// Smooth scrolling functionality
+smoothScroll.init({
+    easing: 'easeOutCubic'
+});
 
-function initMap() {
-  
-  var myLatLng = {lat: 38.605396, lng: -90.345761};
-
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: myLatLng,
-    zoom: 15,
-    disableDefaultUI: true,
-    draggable: false,
-    zoomControl: false
+// Mobile navigation functionality
+const hamburger = document.querySelector('.js-hamburger');
+const nav = document.querySelector('nav ul');
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('open');
   });
-
-  var marker = new google.maps.Marker({
-  	position: myLatLng,
-  	map: map,
-  	title: 'St. Louis Wellness Center'
-  });
-
 }

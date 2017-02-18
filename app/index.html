@@ -12,10 +12,10 @@
   </head>
   <body>
     <div class="wrapper">
-    	<header>
+    	<header id="top">
     		<h1>Stepping Stone Counseling</h1>
     		<nav>
-    			<span class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></span>
+    			<span class="hamburger js-hamburger"><i class="fa fa-bars" aria-hidden="true"></i></span>
     			<ul>
     				<li><a data-scroll href="#about">About</a></li>
     				<li><a data-scroll href="#new-clients">New Clients</a></li>
@@ -39,7 +39,7 @@
 
 				<p>I work with clients on many issues including:</p>
 
-				<ul>
+				<ul class="issues">
 					<li>Anxiety</li>
 					<li>Stress</li>
 					<li>Depression</li>
@@ -62,10 +62,13 @@
 
 				<h3>Member Organizations</h3>
 
-				<ul>
+				<ul class="organizations">
 					<li><a href="https://www.counseling.org/">The American Counseling Association</a></li>
 					<li><a href="https://therapists.psychologytoday.com/rms/prof_detail.php?profid=105584&amp;p=10&amp;tr=Ext_Verify">Verified by Psychology Today</a></li>
 				</ul>
+
+				<a class="to-top" data-scroll data-options='{"easing": "easeOutCubic"}' href="#top">Back to top</a>
+
     		</section>
     		<section id="new-clients">
     			<h2>New Clients</h2>
@@ -86,27 +89,33 @@
               		<li><a href="forms/Insurance Information Form.pdf" target="_blank">Insurance Information Form</a></li>
               		<li><a href="forms/Privacy Notice.pdf" target="_blank">Privacy Notice</a></li>
 				</ul>
+
+				<a class="to-top" data-scroll data-options='{"easing": "easeOutCubic"}' href="#top">Back to top</a>
+
     		</section>
     		<section id="contact">
     			<h2>Office Location</h2>
     			<div id="map"></div>
-				<p>
-					<strong>Inside the St. Louis Wellness Center</strong><br/>
-					<address>
-						425 Marshall Avenue<br/>
-						Webster Groves, Missouri 63119
-					</address>
-				</p>
-
-				<h3>Get in touch</h3>
-				<ul>
-					<li>
-						<a href="https://www.facebook.com/SteppingStoneCounselingLLC">
-							<i class="fa fa-facebook-official" aria-hidden="true"></i>
-						</a>
-					</li>
-					<li>Phone: <a href="tel:3143746471">314-374-6471</a></li>
-				</ul>
+    			<div class="address-wrapper">
+					<p>
+						<strong>Inside the St. Louis Wellness Center</strong><br/>
+						<address>
+							<a href="https://www.google.com/maps/place/425+Marshall+Ave,+Webster+Groves,+MO+63119/@38.605182,-90.3479497,17z/data=!3m1!4b1!4m13!1m7!3m6!1s0x87d8cbaf4ceb5ab1:0xf6abb0c475918a1!2s425+Marshall+Ave,+Webster+Groves,+MO+63119!3b1!8m2!3d38.6051778!4d-90.345761!3m4!1s0x87d8cbaf4ceb5ab1:0xf6abb0c475918a1!8m2!3d38.6051778!4d-90.345761" target="_blank">425 Marshall Avenue<br/>
+							Webster Groves, Missouri 63119</a>
+						</address>
+					</p>
+				</div>
+				<div class="contact-wrapper">
+					<h3>Get in touch</h3>
+					<ul>
+						<li>Phone: <a href="tel:3143746471">314-374-6471</a></li>
+						<li>
+							<a href="https://www.facebook.com/SteppingStoneCounselingLLC">
+								<i class="fa fa-facebook-official" aria-hidden="true"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
 
 				<p>Use the form below to send me an e-mail.</p>
 
@@ -128,9 +137,43 @@
 	           
 	                <input type="submit" value="Send" />
 	            </form>
+
+	            <a class="to-top" data-scroll data-options='{"easing": "easeOutCubic"}' href="#top">Back to top</a>
+
     		</section>
     	</main>
     </div>
+    <script>
+      function initMap() {
+        const geocoder = new google.maps.Geocoder();
+
+        geocoder.geocode({
+        	'address': '425 Marshall Ave, Webster Groves, MO 63119, USA'
+        }, (results, status) => {
+        	if (status !== 'OK') {
+        		console.log(`Geocode was not successful for the following reason: ${status}`)
+        	}
+
+        	const map = new google.maps.Map(document.getElementById('map'), {
+	          zoom: 16,
+	          center: results[0].geometry.location,
+	          mapTypeControl: false,
+	          zoomControl: false,
+	          scaleControl: false,
+	          gestureHandling: 'none'
+	        });
+
+	        const marker = new google.maps.Marker({
+	          position: results[0].geometry.location,
+	          map: map,
+	          title: "St. Louis Wellness Center",
+	          animation: google.maps.Animation.DROP
+	        });
+        });
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqFfFitjDWgGp8DVbbb62PpmCN0OUs0Us&callback=initMap">
+    </script>
     <script type="text/javascript" src="js/smooth-scroll.js"></script>
     <script type="text/javascript" src="bundle.js"></script>
   </body>

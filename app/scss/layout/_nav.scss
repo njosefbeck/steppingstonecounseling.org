@@ -5,28 +5,76 @@ nav {
 	a {
 		text-decoration: none;
 		color: $half-baked;
+		display: block;
 	}
 
 	ul {
 		position: absolute;
+		opacity: 0;
+		visibility: hidden;
 		margin: 0 auto;
 		width: 200px;
 		left: 0;
 		right: 0;
-		top: 138%;
+		top: 132%;
 		background-color: $white;
+		transition: 0.5s;
 
 		li {
 			padding: 5px;
 
 			&:first-child, &:last-child {
 				border: 3px solid $half-baked;
+
+				@media (min-width: 800px) {
+					border: 0;
+				}
 			}
 
 			&:not(:first-child), &:not(:last-child) {
 				border-left: 3px solid $half-baked;
 				border-right: 3px solid $half-baked;
+
+				@media (min-width: 800px) {
+					border: 0;
+				}
 			}
+
+			&:before {
+				@media (min-width: 800px) {
+					content: '';
+					width: 25px;
+					height: 25px;
+					border-radius: 25px;
+					position: absolute;
+					left: -25px;
+					background-color: $half-baked;
+				}
+			}
+
+			&:last-child {
+				@media (min-width: 800px) {
+					margin-right: 0;
+				}
+			}
+
+			@media (min-width: 800px) {
+				display: inline-block;
+				position: relative;
+				margin: 15px 30px;
+			}
+		}
+
+		&.open {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		@media (min-width: 800px) {
+			visibility: visible;
+			opacity: 1;
+			position: relative;
+			width: auto;
 		}
 	}
 
@@ -34,5 +82,14 @@ nav {
 		cursor: pointer;
 		color: $half-baked;
 		font-size: 1.5rem;
+
+		@media (min-width: 800px) {
+		  display: none;
+		}
+	}
+
+	@media (min-width: 800px) {
+		float: right;
+		margin-bottom: 0;
 	}
 }

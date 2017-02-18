@@ -1,11 +1,38 @@
 #about {
-	padding-top: 0.75rem;
+	margin-top: -7px;
+	background-color: $tropical-blue;
 
 	h2 {
 		margin-bottom: 0;
 	}
 
+	h4 {
+		@media (min-width: 800px) {
+			text-align: center;
+		}
+	}
+
 	img {
 		margin-bottom: 0.75rem;
+
+		@media (min-width: 800px) {
+			float: left;
+			width: 45%;
+			margin-right: 1rem;
+		}
+	}
+
+	.issues li {
+		@media (min-width: 800px) {
+			display: inline-block;
+			width: 24%;
+		}
+	}
+
+	.organizations li {
+		@media (min-width: 800px) {
+			display: inline-block;
+			margin: 0 10px;
+		}
 	}
 }

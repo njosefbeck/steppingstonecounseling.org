@@ -4,8 +4,8 @@
 .DS_Store?
 node_modules
 /dist/
-style.css
-style.css.map
+styles.css
+styles.css.map
 app/bundle.js
 .publish/
 yarn.lock
