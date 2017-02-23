@@ -74,7 +74,7 @@ gulp.task('styles', () => {
 gulp.task('images', () => {
 	return gulp.src(imagePaths.src + '/*')
 		.pipe(imagemin())
-		.pipe(gulp.dest('./images'));
+		.pipe(gulp.dest('./dist/images'));
 });
 
 gulp.task('bundle', () => {
@@ -88,13 +88,9 @@ gulp.task('usemin', ['images', 'bundle', 'delete-production'], () => {
 			js: [uglify],
 			css: [cssnano] 
 		}))
-		.pipe(gulp.dest('./'));
+		.pipe(gulp.dest('./dist'));
 });
 
 gulp.task('delete-production', () => {
-	return del([
-		'./*.html',
-		'./styles.css',
-		'./bundle.js'
-	]);
+	return del(['./dist']);
 });
