@@ -40,15 +40,17 @@ nav {
 				}
 			}
 
-			&:before {
+			.circle {
+				display: none;
+				
 				@media (min-width: 800px) {
-					content: '';
 					width: 25px;
 					height: 25px;
 					border-radius: 25px;
-					position: absolute;
-					left: -25px;
 					background-color: $half-baked;
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 10px;
 				}
 			}
 
@@ -61,7 +63,7 @@ nav {
 			@media (min-width: 800px) {
 				display: inline-block;
 				position: relative;
-				margin: 15px 30px;
+				margin: 15px 15px;
 			}
 		}
 

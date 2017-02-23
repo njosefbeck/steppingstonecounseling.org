@@ -9,6 +9,8 @@ form {
 		width: 80%;
 		margin-bottom: 0.75rem;
 		border: 0;
+		border-radius: 0;
+		-webkit-appearance: none;
 		text-align: center;
 		font-size: 1rem;
 		font-family: $main-font;
@@ -18,11 +20,16 @@ form {
 		@media (min-width: 800px) {
 			margin: 0 0 0.75rem 0;
 			text-align: left;
+			width: 40%;
 		}
 	}
 
 	textarea {
 		height: 200px;
+
+		@media (min-width: 800px) {
+			width: 60%;
+		}
 	}
 
 	input[type="submit"] {
@@ -30,6 +37,10 @@ form {
 		background-color: $white;
 		border: 3px solid $elephant;
 		text-align: center;
+
+		@media (min-width: 800px) {
+			width: 15%;
+		}
 	}
 
 	::-webkit-input-placeholder {

@@ -81,12 +81,11 @@ img {
 h1 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 1.1;
   color: #92BBD1; }
   @media (min-width: 800px) {
     h1 {
-      font-size: 2rem;
       float: left; } }
 
 h2 {
@@ -165,15 +164,17 @@ nav {
         @media (min-width: 800px) {
           nav ul li:not(:first-child), nav ul li:not(:last-child) {
             border: 0; } }
-      @media (min-width: 800px) {
-        nav ul li:before {
-          content: '';
-          width: 25px;
-          height: 25px;
-          border-radius: 25px;
-          position: absolute;
-          left: -25px;
-          background-color: #92BBD1; } }
+      nav ul li .circle {
+        display: none; }
+        @media (min-width: 800px) {
+          nav ul li .circle {
+            width: 25px;
+            height: 25px;
+            border-radius: 25px;
+            background-color: #92BBD1;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px; } }
       @media (min-width: 800px) {
         nav ul li:last-child {
           margin-right: 0; } }
@@ -181,7 +182,7 @@ nav {
         nav ul li {
           display: inline-block;
           position: relative;
-          margin: 15px 30px; } }
+          margin: 15px 15px; } }
     nav ul.open {
       visibility: visible;
       opacity: 1; }
@@ -205,7 +206,7 @@ nav {
 
 #about {
   margin-top: -7px;
-  background-color: #2DEEFA; }
+  background-color: #D2EEFA; }
   #about h2 {
     margin-bottom: 0; }
   @media (min-width: 800px) {
@@ -236,6 +237,8 @@ form input, form textarea {
   width: 80%;
   margin-bottom: 0.75rem;
   border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
   text-align: center;
   font-size: 1rem;
   font-family: "Ruluko", sans-serif;
@@ -244,16 +247,23 @@ form input, form textarea {
   @media (min-width: 800px) {
     form input, form textarea {
       margin: 0 0 0.75rem 0;
-      text-align: left; } }
+      text-align: left;
+      width: 40%; } }
 
 form textarea {
   height: 200px; }
+  @media (min-width: 800px) {
+    form textarea {
+      width: 60%; } }
 
 form input[type="submit"] {
   width: 40%;
   background-color: #FFFFFF;
   border: 3px solid #164459;
   text-align: center; }
+  @media (min-width: 800px) {
+    form input[type="submit"] {
+      width: 15%; } }
 
 form ::-webkit-input-placeholder {
   color: #CFD0D2; }
