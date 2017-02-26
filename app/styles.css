@@ -74,6 +74,10 @@ section {
   @media (min-width: 800px) {
     section {
       text-align: left; } }
+  section .to-top {
+    margin-top: 2rem;
+    text-align: center;
+    display: block; }
 
 img {
   max-width: 100%; }
@@ -122,15 +126,16 @@ p, ul {
 
 footer {
   font-size: 0.75rem;
-  padding-top: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-bottom: 2rem; }
+  height: 66px; }
   footer a,
   footer a:visited,
   footer a:hover,
   footer a:link {
     color: #164459; }
+  footer p {
+    padding-top: 1rem; }
 
 nav {
   position: relative;

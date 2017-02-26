@@ -34,6 +34,12 @@ section {
 	@media (min-width: 800px) {
 		text-align: left;
 	}
+
+	.to-top {
+		margin-top: 2rem;
+		text-align: center;
+		display: block;
+	}
 }
 
 img {
@@ -96,15 +102,18 @@ header {
 
 footer {
 	font-size: 0.75rem;
-	padding-top: 1rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
-	padding-bottom: 2rem;
+	height: 66px;
 
 	a,
 	a:visited,
 	a:hover,
 	a:link {
 		color: $elephant;
+	}
+
+	p {
+		padding-top: 1rem;
 	}
 }
