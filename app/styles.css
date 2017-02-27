@@ -90,7 +90,9 @@ h1 {
   color: #92BBD1; }
   @media (min-width: 800px) {
     h1 {
-      float: left; } }
+      float: left;
+      margin-top: 0.9rem;
+      margin-left: 0.5rem; } }
 
 h2 {
   margin-bottom: 0.75rem;
@@ -168,7 +170,8 @@ nav {
         border-right: 3px solid #92BBD1; }
         @media (min-width: 800px) {
           nav ul li:not(:first-child), nav ul li:not(:last-child) {
-            border: 0; } }
+            border: 0;
+            margin-right: 2px; } }
       nav ul li .circle {
         display: none; }
         @media (min-width: 800px) {
@@ -179,7 +182,7 @@ nav {
             background-color: #92BBD1;
             display: inline-block;
             vertical-align: middle;
-            margin-right: 10px; } }
+            margin-right: 3px; } }
       @media (min-width: 800px) {
         nav ul li:last-child {
           margin-right: 0; } }
@@ -187,7 +190,7 @@ nav {
         nav ul li {
           display: inline-block;
           position: relative;
-          margin: 15px 15px; } }
+          margin: 15px 8px; } }
     nav ul.open {
       visibility: visible;
       opacity: 1; }
@@ -207,7 +210,8 @@ nav {
   @media (min-width: 800px) {
     nav {
       float: right;
-      margin-bottom: 0; } }
+      margin-bottom: 0;
+      margin-right: 0.5rem; } }
 
 #about {
   margin-top: -7px;
@@ -231,7 +235,9 @@ nav {
   @media (min-width: 800px) {
     #about .organizations li {
       display: inline-block;
-      margin: 0 10px; } }
+      margin: 0 10px; }
+      #about .organizations li:first-child {
+        margin-left: 0; } }
 
 form label {
   display: none; }
