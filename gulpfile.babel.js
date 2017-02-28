@@ -11,6 +11,7 @@ import source from 'vinyl-source-stream';
 import watchify from 'watchify';
 import imagemin from 'gulp-imagemin';
 import usemin from 'gulp-usemin';
+import ghPages from 'gulp-gh-pages';
 import uglify from 'gulp-uglify';
 import cssnano from 'gulp-cssnano';
 import del from 'del';
@@ -93,4 +94,9 @@ gulp.task('usemin', ['images', 'bundle', 'delete-production'], () => {
 
 gulp.task('delete-production', () => {
 	return del(['./dist']);
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
 });
