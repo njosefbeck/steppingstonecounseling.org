@@ -78,13 +78,18 @@ gulp.task('images', () => {
 		.pipe(gulp.dest('./dist/images'));
 });
 
+gulp.task('forms', () => {
+	return gulp.src(dirs.app + '/forms/**/*')
+		.pipe(gulp.dest('./dist/forms'));
+});
+
 gulp.task('bundle', () => {
 	var bundler = browserify(jsPaths.src).transform(babelify, { presets: ['es2015'] });
 	bundle(bundler);
 });
 
-gulp.task('usemin', ['images', 'bundle', 'delete-production'], () => {
-	return gulp.src([dirs.app + '/*.html', dirs.app + '/forms/'])
+gulp.task('usemin', ['images', 'bundle', 'forms'], () => {
+	return gulp.src([dirs.app + '/*.html'])
 		.pipe(usemin({
 			js: [uglify],
 			css: [cssnano] 
