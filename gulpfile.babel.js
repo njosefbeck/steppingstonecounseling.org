@@ -84,7 +84,7 @@ gulp.task('bundle', () => {
 });
 
 gulp.task('usemin', ['images', 'bundle', 'delete-production'], () => {
-	return gulp.src([dirs.app + '/*.html'])
+	return gulp.src([dirs.app + '/*.html', dirs.app + '/forms/'])
 		.pipe(usemin({
 			js: [uglify],
 			css: [cssnano] 
